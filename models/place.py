@@ -1,11 +1,18 @@
 #!/usr/bin/python3
-"""Module for Place class."""
 
-from models.base_model import BaseModel
+"""
+This module provides the class Place
+"""
 
 
-class Place(BaseModel):
-    """Class representing a Place."""
+from models import base_model
+
+
+class Place(base_model.BaseModel):
+    """
+    Place class that inherits from BaseModel
+    """
+
     city_id = ""
     user_id = ""
     name = ""
@@ -14,6 +21,9 @@ class Place(BaseModel):
     number_bathrooms = 0
     max_guest = 0
     price_by_night = 0
-    latitude = 0.0
+    latitiude = 0.0
     longitude = 0.0
     amenity_ids = []
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

@@ -1,9 +1,19 @@
 #!/usr/bin/python3
-"""Module for Amenity class."""
 
-from models.base_model import BaseModel
+"""
+This module provides the class Amenity
+"""
 
 
-class Amenity(BaseModel):
-    """Class representing a Amenity."""
+from models import base_model
+
+
+class Amenity(base_model.BaseModel):
+    """
+    Amenity class that inherits form BaseModel
+    """
+
     name = ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
